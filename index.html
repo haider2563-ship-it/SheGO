@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHEGO — Move with confidence</title>
+<style>
+:root{--ink:#25172c;--muted:#776c7c;--pink:#e94f91;--pink2:#ffeff6;--purple:#6b3d83;--lav:#f6f0fa;--line:#eee6ef;--green:#198765;--bg:#fffafd;--shadow:0 18px 55px #47274b12}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial}button,input,select{font:inherit}button{cursor:pointer;border:0}a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 26px}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;letter-spacing:-1px}.logo{width:37px;height:37px;border-radius:13px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;color:white;font-weight:900}.brand span{color:var(--pink)}nav{display:flex;gap:26px;color:#66596b;font-size:14px}nav a:hover{color:var(--pink)}.navright{display:flex;gap:10px;align-items:center}.btn{border-radius:12px;padding:12px 17px;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-1px)}.primary{background:linear-gradient(135deg,var(--pink),#c34f9c);color:#fff;box-shadow:0 8px 20px #e94f9130}.soft{background:var(--pink2);color:#c43d7a}.outline{background:#fff;border:1px solid var(--line);color:var(--ink)}.hero{padding:76px 0 64px;background:radial-gradient(circle at 78% 32%,#f7dceb 0,transparent 28%),linear-gradient(120deg,#fffafd,#f9f2fa)}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.eyebrow{color:#c33e7b;font-weight:800;font-size:12px;letter-spacing:1.7px;text-transform:uppercase}.hero h1{font-size:clamp(42px,5vw,66px);line-height:1.04;letter-spacing:-3px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--pink)}.lead{font-size:18px;color:var(--muted);max-width:520px}.actions{display:flex;gap:12px;margin:27px 0}.trust{display:flex;gap:22px;color:#756879;font-size:13px;flex-wrap:wrap}.trust b{color:var(--ink)}.visual{min-height:430px;border-radius:30px;background:linear-gradient(145deg,#f5d9e9,#e9def3);position:relative;overflow:hidden;padding:28px;box-shadow:var(--shadow)}.map{height:100%;min-height:370px;border-radius:23px;background-color:#fbf9fc;background-image:linear-gradient(30deg,transparent 47%,#eadfeb 48%,#eadfeb 50%,transparent 51%),linear-gradient(120deg,transparent 47%,#e8e0eb 48%,#e8e0eb 50%,transparent 51%);background-size:90px 90px;position:relative;overflow:hidden}.road{position:absolute;background:#fff;border:1px solid #eadfe9;border-radius:30px;transform:rotate(-25deg);width:130%;height:32px;top:45%;left:-15%}.road.r2{transform:rotate(38deg);top:25%;height:25px}.pin{position:absolute;top:34%;left:26%;background:var(--purple);color:#fff;padding:10px 14px;border-radius:15px;box-shadow:0 8px 22px #39204c30;font-weight:800}.pin.end{top:66%;left:66%;background:var(--pink)}.ridecard{position:absolute;bottom:20px;left:20px;right:20px;background:#fff;border-radius:18px;padding:16px;box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center}.avatar{width:42px;height:42px;border-radius:50%;background:var(--pink2);display:grid;place-items:center;color:#bd3978;font-weight:900}.section{padding:72px 0}.center{text-align:center}.section h2{font-size:36px;letter-spacing:-1.4px;margin:8px 0 12px}.sub{color:var(--muted);max-width:650px;margin:0 auto}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 8px 25px #40204008}.ico{width:48px;height:48px;border-radius:15px;background:var(--pink2);display:grid;place-items:center;font-size:22px;margin-bottom:17px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0}.safety{background:#2b1d32;color:#fff}.safety .sub{color:#d7cbdc}.safety .card{background:#382940;border-color:#4b3a52}.safety .card p{color:#d7cbdc}.safety .ico{background:#56344f}.cta{padding:52px;border-radius:26px;background:linear-gradient(120deg,#e94f91,#75458c);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{font-size:34px;margin:0}.cta p{color:#ffebf4;margin:7px 0 0}.cta .btn{background:#fff;color:#a63772}.footer{padding:35px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}.dash{display:none;padding:34px 0 70px}.dash.active{display:block}.home.hidden{display:none}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 26px}.tab{padding:10px 15px;border:1px solid var(--line);border-radius:12px;background:#fff;color:#685c6d;font-weight:700}.tab.active{background:var(--pink2);border-color:#f3c4d9;color:#b73775}.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}.dashgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.field{display:flex;flex-direction:column;gap:6px;margin:13px 0}.field label{font-size:13px;font-weight:750;color:#5d5063}.field input,.field select{border:1px solid #e6dce8;border-radius:11px;padding:13px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--pink);box-shadow:0 0 0 3px #e94f9118}.row{display:flex;gap:12px}.row>*{flex:1}.muted{color:var(--muted)}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:20px 0}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:5px}.badge{display:inline-flex;padding:5px 9px;border-radius:20px;background:#e9f7f1;color:#177b5c;font-size:11px;font-weight:800}.warn{background:#fff4e6;color:#a65d11}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-weight:700}.notice{padding:13px 15px;border-radius:13px;background:#fff5e9;color:#86500d;font-size:13px;margin:15px 0}.success{padding:13px 15px;border-radius:13px;background:#eaf8f2;color:#176c52;font-size:13px;margin:15px 0}.mapmock{height:190px;border-radius:15px;background:repeating-linear-gradient(30deg,#f6f1f7 0 30px,#eee6f0 31px 33px);display:grid;place-items:center;color:#826c89;text-align:center}.hidden{display:none!important}.modalbg{position:fixed;inset:0;background:#21132688;z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.modalbg.show{display:flex}.modal{background:white;border-radius:22px;padding:26px;max-width:460px;width:100%;box-shadow:0 25px 80px #160b1b55}.close{float:right;background:#f5edf5;border-radius:9px;padding:6px 10px}.small{font-size:12px}.mobileMenu{display:none}
+@media(max-width:800px){nav{display:none}.heroGrid,.dashgrid{grid-template-columns:1fr}.visual{min-height:350px}.cards{grid-template-columns:1fr}.statgrid{grid-template-columns:repeat(2,1fr)}.cta{padding:30px;display:block}.cta .btn{margin-top:18px}.hero{padding:48px 0}.section{padding:52px 0}.wrap{padding:0 18px}.top{height:66px}.brand{font-size:20px}.navright .outline{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+<a class="brand" href="#" onclick="showHome()"><span class="logo">S</span>SHE<span>GO</span></a>
+<nav><a href="#how">How it works</a><a href="#safety">Safety</a><a href="#drivers">For drivers</a><a href="#about">About</a></nav>
+<div class="navright"><button class="btn outline" onclick="openModal('login')">Sign in</button><button class="btn primary" onclick="showApp('passenger')">Book a ride</button></div>
+</div></header>
+<main id="home" class="home">
+<section class="hero"><div class="wrap heroGrid"><div><div class="eyebrow">A ride service designed around women</div><h1>Move freely.<br><em>Feel confident.</em></h1><p class="lead">Your city, your schedule, your comfort. SHEGO connects women passengers with verified women drivers for everyday journeys.</p><div class="actions"><button class="btn primary" onclick="showApp('passenger')">Book your first ride ↗</button><button class="btn outline" onclick="showApp('driver')">Become a driver</button></div><div class="trust"><span>✦ <b>Verified profiles</b></span><span>✦ <b>Trip sharing</b></span><span>✦ <b>Support options</b></span></div></div>
+<div class="visual"><div class="map"><div class="road"></div><div class="road r2"></div><div class="pin">Pickup ●</div><div class="pin end">Destination ●</div><div class="ridecard"><div style="display:flex;gap:10px;align-items:center"><div class="avatar">S</div><div><b>Women-led journeys</b><div class="small muted">A little more peace of mind</div></div></div><span class="badge">SHEGO</span></div></div></div></div></section>
+<section class="section" id="how"><div class="wrap center"><div class="eyebrow">Simple by design</div><h2>Your ride in three steps</h2><p class="sub">From booking to arrival, the essentials stay clear and easy to follow.</p><div class="cards"><article class="card"><div class="ico">⌖</div><h3>Set your journey</h3><p>Enter pickup and destination, review the estimated fare and request a ride.</p></article><article class="card"><div class="ico">♡</div><h3>Meet your driver</h3><p>Review the driver's profile and vehicle details. Confirm the pickup using your trip PIN.</p></article><article class="card"><div class="ico">✦</div><h3>Arrive with confidence</h3><p>Share trip details with a trusted contact and reach support from your trip screen.</p></article></div></div></section>
+<section class="section safety" id="safety"><div class="wrap center"><div class="eyebrow" style="color:#f5a5c9">Safety is a process</div><h2>Designed with care at every step</h2><p class="sub">Trust is built through clear policies, accountable operations and responsive support—not promises alone.</p><div class="cards"><article class="card"><div class="ico">✓</div><h3>Identity review</h3><p>Driver onboarding includes identity, licence and vehicle-document checks. Passenger eligibility is reviewed under a published policy.</p></article><article class="card"><div class="ico">◎</div><h3>Trip visibility</h3><p>Trip status, pickup details and emergency-contact tools help passengers stay informed during a journey.</p></article><article class="card"><div class="ico">☎</div><h3>Human support</h3><p>Report concerns, request a review and access clear cancellation and incident-handling procedures.</p></article></div></div></section>
+<section class="section" id="drivers"><div class="wrap"><div class="cta"><div><h2>Drive on your terms.</h2><p>Join the SHEGO driver community and manage ride requests from one place.</p></div><button class="btn" onclick="showApp('driver')">Explore driver portal ↗</button></div></div></section>
+<section class="section" id="about"><div class="wrap center"><div class="eyebrow">Our approach</div><h2>More than a ride</h2><p class="sub">SHEGO is a proposed women-focused mobility platform, initially designed for a pilot launch in Faisalabad, Pakistan. The service will operate only after required licensing, insurance, identity-verification arrangements and safety procedures are in place.</p></div></section>
+</main>
+<section class="dash" id="app"><div class="wrap"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div><div class="eyebrow">SHEGO workspace</div><h2 style="margin:5px 0">Platform preview</h2><div class="muted small">Interactive demonstration · sample data only</div></div><button class="btn outline" onclick="showHome()">← Back to website</button></div>
+<div class="tabs"><button class="tab active" data-tab="passenger" onclick="switchTab('passenger')">Passenger</button><button class="tab" data-tab="driver" onclick="switchTab('driver')">Driver</button><button class="tab" data-tab="admin" onclick="switchTab('admin')">Admin dashboard</button></div>
+<div id="passenger" class="tabpage"><div class="dashgrid"><div class="panel"><h3>Where would you like to go?</h3><p class="muted small">Book a ride with a verified SHEGO driver.</p><div class="field"><label>Pickup location</label><input id="pickup" value="D-Ground, Faisalabad" placeholder="Enter pickup location"></div><div class="field"><label>Destination</label><input id="destination" placeholder="Where are you going?"></div><div class="row"><div class="field"><label>Ride type</label><select id="rideType"><option>Standard</option><option>Comfort</option><option>Family (eligible women and children)</option></select></div><div class="field"><label>Payment method</label><select id="payment"><option>Cash</option><option>Digital wallet (demo)</option></select></div></div><div class="field"><label>Who will travel?</label><select id="traveller"><option value="self">I am the verified passenger</option><option value="guest">Another verified female passenger</option></select></div><div class="notice">Only the verified, eligible passenger may take the trip. Guest bookings require the actual passenger to have an approved account. A pickup PIN confirms the booking; it does not independently verify identity.</div><button class="btn primary" style="width:100%" onclick="estimateRide()">Find a ride</button><div id="fareResult"></div></div><div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><h3>Live Google Map</h3><button class="btn soft" onclick="connectGoogleMaps()">Connect Google Maps</button></div><div id="mapCanvas" class="mapmock" style="height:310px">⌖<br>Google Maps will appear here<br><span class="small">Add your restricted Google Maps API key to enable real map data.</span></div><div id="mapStatus" class="small muted" style="margin-top:9px">Not connected · no live route data yet</div><div class="row" style="margin-top:16px"><div><div class="small muted">Road distance</div><b id="routeDistance">—</b></div><div><div class="small muted">Estimated drive time</div><b id="routeDuration">—</b></div></div><div class="row" style="margin-top:12px"><div><div class="small muted">Fare estimate</div><b id="farePreview">—</b></div><div><div class="small muted">Pickup fuel estimate</div><b id="fuelPreview">—</b></div></div><p class="small muted" style="margin:14px 0 0">Route and fare estimates are calculated from selected Google place locations. Final pricing rules must be configured by SHEGO.</p></div></div></div>
+<div id="driver" class="tabpage hidden"><div class="dashgrid"><div class="panel"><h3>Driver portal</h3><p class="muted small">Manage availability and review incoming requests.</p><div class="row"><div class="field"><label>Driver status</label><select id="driverStatus"><option>Available</option><option>Offline</option></select></div><div class="field"><label>Vehicle</label><select><option>Registered vehicle</option><option>Car</option><option>Motorbike</option></select></div></div><div class="success">Demo driver profile · identity and vehicle documents are not verified in this preview.</div><h4>Incoming request</h4><div style="display:flex;justify-content:space-between;align-items:center"><div><b>Sample trip · 3.8 km pickup</b><div class="small muted">D-Ground → Peoples Colony</div></div><span class="badge">Rs. 450 est.</span></div><div class="actions"><button class="btn primary" onclick="driverAction('accepted')">Accept request</button><button class="btn outline" onclick="driverAction('declined')">Decline</button></div><div id="driverMsg" class="small muted"></div></div><div class="panel"><h3>Pickup issue reporting</h3><p class="muted small">If the person at pickup does not match the eligible booking, do not start the trip. Use the report workflow and contact support if needed.</p><div class="field"><label>Issue type</label><select id="issue"><option>Passenger eligibility mismatch</option><option>Passenger not present</option><option>Safety concern</option><option>Other pickup issue</option></select></div><div class="field"><label>Pickup notes (optional)</label><input id="notes" placeholder="Add factual details"></div><button class="btn soft" onclick="reportIssue()">Submit pickup report</button><div id="issueMsg"></div></div></div></div>
+<div id="admin" class="tabpage hidden"><div class="statgrid"><div class="stat"><small>Demo bookings</small><strong id="bookingCount">128</strong></div><div class="stat"><small>Driver applications</small><strong>24</strong></div><div class="stat"><small>Open support cases</small><strong id="caseCount">3</strong></div><div class="stat"><small>Pickup compensation</small><strong>Rs. 2,450</strong></div></div><div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h3>Operations overview</h3><span class="badge warn">Sample data</span></div><div style="overflow:auto"><table class="table"><thead><tr><th>Reference</th><th>Type</th><th>Status</th><th>Amount</th><th>Action</th></tr></thead><tbody id="adminRows"><tr><td>SG-1028</td><td>Completed ride</td><td><span class="badge">Completed</span></td><td>Rs. 620</td><td>—</td></tr><tr><td>SG-1027</td><td>Pickup mismatch</td><td><span class="badge warn">Under review</span></td><td>Rs. 100 proposed</td><td><button class="btn soft" onclick="reviewCase(this)">Review</button></td></tr><tr><td>SG-1026</td><td>Driver application</td><td><span class="badge warn">Pending</span></td><td>—</td><td><button class="btn soft" onclick="reviewCase(this)">Review</button></td></tr></tbody></table></div><div class="notice">Admin controls shown here are a front-end demonstration. Production access must be protected by server-side roles, audit logs and secure authentication.</div></div></div>
+</div></section>
+<footer class="footer"><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap"><div><b>SHEGO</b> · Move with confidence</div><div>Concept website · Pakistan · © 2026 SHEGO</div><div>Privacy · Terms · Support</div><div class="small" style="width:100%;text-align:center;margin-top:12px;color:#8a7b8e">Website developed by <strong style="color:#5c465f">Malaika Tariq</strong></div></div></footer>
+<div class="modalbg" id="mapsModal"><div class="modal"><button class="close" onclick="closeMapsModal()">✕</button><div class="eyebrow">Google Maps connection</div><h2 style="margin:8px 0">Connect your Maps project</h2><p class="muted small">Paste a Google Maps Platform browser key. Restrict it by website referrer and API before using it. This demo keeps the key in this browser session only.</p><div class="field"><label>Google Maps API key</label><input id="mapsKeyInput" type="password" placeholder="Paste API key"></div><button class="btn primary" style="width:100%" onclick="saveMapsKey()">Load live map</button><p class="small muted">Required APIs: Maps JavaScript API, Places API (New), and Routes API. Billing must be enabled in Google Cloud.</p></div></div>
+<div class="modalbg" id="modal"><div class="modal"><button class="close" onclick="closeModal()">✕</button><div class="eyebrow">Welcome to SHEGO</div><h2 style="margin:8px 0">Sign in preview</h2><p class="muted">Authentication is not connected in this prototype. Choose a workspace to explore the demo.</p><div class="field"><label>Mobile number</label><input placeholder="+92 3XX XXXXXXX"></div><button class="btn primary" style="width:100%" onclick="closeModal();showApp('passenger')">Continue to demo</button></div></div>
+<script>
+let bookings=128,cases=3;
+function showHome(){document.getElementById('home').classList.remove('hidden');document.getElementById('app').classList.remove('active');window.scrollTo(0,0)}
+function showApp(tab){document.getElementById('home').classList.add('hidden');document.getElementById('app').classList.add('active');switchTab(tab);window.scrollTo(0,0)}
+function switchTab(tab){document.querySelectorAll('.tabpage').forEach(x=>x.classList.add('hidden'));document.getElementById(tab).classList.remove('hidden');document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab))}
+let mapsReady=false, mapObj=null, pickupPlace=null, destinationPlace=null, pickupMarker=null, destinationMarker=null, routeLine=null;
+function connectGoogleMaps(){document.getElementById('mapsModal').classList.add('show')}
+function closeMapsModal(){document.getElementById('mapsModal').classList.remove('show')}
+async function saveMapsKey(){
+  const key=document.getElementById('mapsKeyInput').value.trim();
+  if(!key){alert('Please paste your Google Maps API key.');return}
+  sessionStorage.setItem('shego_maps_key',key);
+  closeMapsModal();
+  await loadGoogleMaps(key);
+}
+async function loadGoogleMaps(key){
+  const status=document.getElementById('mapStatus');
+  status.textContent='Loading Google Maps services…';
+  try{
+    if(!window.google || !google.maps){
+      await new Promise((resolve,reject)=>{
+        const script=document.createElement('script');
+        script.src='https://maps.googleapis.com/maps/api/js?key='+encodeURIComponent(key)+'&v=weekly&loading=async';
+        script.async=true; script.defer=true;
+        script.onload=resolve; script.onerror=()=>reject(new Error('Google Maps script could not load. Check the API key, billing and API restrictions.'));
+        document.head.appendChild(script);
+      });
+    }
+    const {Map}=await google.maps.importLibrary('maps');
+    const {PlaceAutocompleteElement}=await google.maps.importLibrary('places');
+    await google.maps.importLibrary('marker');
+    mapObj=new Map(document.getElementById('mapCanvas'),{
+      center:{lat:31.418, lng:73.079}, zoom:13, mapId:'DEMO_MAP_ID',
+      mapTypeControl:false, streetViewControl:false, fullscreenControl:true
+    });
+    const pAuto=new PlaceAutocompleteElement({includedRegionCodes:['pk']});
+    const dAuto=new PlaceAutocompleteElement({includedRegionCodes:['pk']});
+    pAuto.placeholder='Search pickup in Pakistan';
+    dAuto.placeholder='Search destination in Pakistan';
+    const pHost=document.getElementById('pickupAutocomplete');
+    const dHost=document.getElementById('destinationAutocomplete');
+    pHost.innerHTML=''; dHost.innerHTML='';
+    pHost.appendChild(pAuto); dHost.appendChild(dAuto);
+    [pAuto,dAuto].forEach(el=>{el.style.width='100%';el.style.display='block'});
+    pAuto.addEventListener('gmp-select',async(event)=>{
+      const place=event.placePrediction.toPlace();
+      await place.fetchFields({fields:['displayName','formattedAddress','location']});
+      pickupPlace=place; updatePlaceMarker('pickup',place);
+    });
+    dAuto.addEventListener('gmp-select',async(event)=>{
+      const place=event.placePrediction.toPlace();
+      await place.fetchFields({fields:['displayName','formattedAddress','location']});
+      destinationPlace=place; updatePlaceMarker('destination',place);
+    });
+    mapsReady=true;
+    status.textContent='Connected · Google Maps, Places search and route calculation are ready.';
+  }catch(err){
+    status.textContent='Maps connection failed: '+err.message;
+    document.getElementById('mapCanvas').innerHTML='Google Maps could not load.<br><span class="small">Check key restrictions, billing and enabled APIs.</span>';
+  }
+}
+function updatePlaceMarker(which,place){
+  const pos=place.location;
+  if(!pos)return;
+  const marker=new google.maps.marker.AdvancedMarkerElement({map:mapObj,position:pos,title:place.displayName||which});
+  if(which==='pickup'){
+    if(pickupMarker)pickupMarker.map=null;
+    pickupMarker=marker;
+  }else{
+    if(destinationMarker)destinationMarker.map=null;
+    destinationMarker=marker;
+  }
+  mapObj.panTo(pos);
+  if(pickupPlace && destinationPlace) calculateLiveRoute();
+}
+async function calculateLiveRoute(){
+  const status=document.getElementById('mapStatus');
+  try{
+    const {Route}=await google.maps.importLibrary('routes');
+    status.textContent='Calculating driving route…';
+    const {routes}=await Route.computeRoutes({
+      origin:pickupPlace.location,
+      destination:destinationPlace.location,
+      travelMode:'DRIVING',
+      routingPreference:'TRAFFIC_AWARE',
+      fields:['path','distanceMeters','duration']
+    });
+    if(!routes || !routes.length) throw new Error('No driving route found for these locations.');
+    const route=routes[0];
+    if(routeLine)routeLine.setMap(null);
+    routeLine=new google.maps.Polyline({path:route.path,geodesic:true,strokeColor:'#e94f91',strokeOpacity:0.95,strokeWeight:6,map:mapObj});
+    const bounds=new google.maps.LatLngBounds();
+    route.path.forEach(point=>bounds.extend(point));
+    mapObj.fitBounds(bounds,{top:40,right:40,bottom:40,left:40});
+    const km=route.distanceMeters/1000;
+    const minutes=Math.round(parseFloat(route.duration.replace('s',''))/60);
+    const fare=Math.round(180+km*75);
+    const fuelCost=Math.round(km*18); // Editable planning assumption only; replace with vehicle-specific cost model.
+    document.getElementById('routeDistance').textContent=km.toFixed(1)+' km';
+    document.getElementById('routeDuration').textContent=minutes+' min';
+    document.getElementById('farePreview').textContent='Rs. '+fare;
+    document.getElementById('fuelPreview').textContent='Rs. '+fuelCost;
+    window.shegoLastRoute={km,minutes,fare,fuelCost,origin:pickupPlace.formattedAddress,destination:destinationPlace.formattedAddress};
+    status.textContent='Live route calculated from Google Maps. Traffic-aware estimate; actual conditions may change.';
+  }catch(err){status.textContent='Route calculation error: '+err.message;}
+}
+async function estimateRide(){
+  if(!mapsReady){document.getElementById('fareResult').innerHTML='<div class="notice">Connect Google Maps first. Add your API key using the button in the map panel.</div>';return}
+  if(!pickupPlace || !destinationPlace){document.getElementById('fareResult').innerHTML='<div class="notice">Choose both pickup and destination from the Google Places suggestions.</div>';return}
+  await calculateLiveRoute();
+  if(!window.shegoLastRoute){document.getElementById('fareResult').innerHTML='<div class="notice">A route could not be calculated. Please try different locations.</div>';return}
+  const r=window.shegoLastRoute;
+  document.getElementById('fareResult').innerHTML='<div class="success"><b>Route estimate ready.</b><br>'+r.origin+' → '+r.destination+'<br>'+r.km.toFixed(1)+' km · '+r.minutes+' min · Estimated fare Rs. '+r.fare+'<br><button class="btn primary" style="margin-top:10px" onclick="confirmBooking()">Create demo booking</button></div>';
+}
+function confirmBooking(){bookings++;document.getElementById('bookingCount').textContent=bookings;document.getElementById('fareResult').innerHTML='<div class="success">Demo booking record created using the Google Maps route estimate. No driver has been dispatched and no payment has been taken.</div>'}
+function driverAction(action){document.getElementById('driverMsg').textContent=action==='accepted'?'Demo request accepted. Live dispatch is not connected.':'Demo request declined.'}
+function reportIssue(){let type=document.getElementById('issue').value;cases++;document.getElementById('caseCount').textContent=cases;document.getElementById('issueMsg').innerHTML='<div class="success">Demo report logged: '+type+'. No cancellation fee has been charged. A real system would verify the event and apply the published policy after review.</div>'}
+function reviewCase(btn){btn.textContent='Flagged for review';btn.disabled=true;btn.classList.add('outline')}
+function openModal(){document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}
+window.addEventListener('load',()=>{const saved=sessionStorage.getItem('shego_maps_key');if(saved)loadGoogleMaps(saved)});
+</script>
+</body></html>
